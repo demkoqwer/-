@@ -35,37 +35,31 @@
 ## Диаграмма
 
 ![Диаграмма вариантов использования](use_case.png)
+
+24 lines (21 loc) · 589 Bytes
 @startuml
-left to right direction
+слева направо
+skinparam  packageStyle  rectangle
 
-actor "Чебурашка" as Cheb
-actor "Гена" as Gena
+актер  «Чебурашка»  в роли  Чеба
+актер  "Гена"  в роли  Гены
 
-package "Строительство Дома Дружбы" {
-usecase "Построить дом" as BuildHouse
-usecase "Найти друга" as FindFriend
-usecase "Играть на гармошке" as PlayAccordion
-usecase "Добавить кирпич" as AddBrick
-usecase "Зарегистрировать друзей" as RegisterFriends
+прямоугольник  "Строительство Дома Дружбы" {
+  вариант использования  «Построить дом»  в качестве  UC1
+  вариант использования  "Найти друга"  как  UC2
+  использовать кейс  "Играть на гармошке"  как  UC3
+  вариант использования  «Добавить кирпич»  в качестве  UC4
+  usecase  «Зарегистрировать друзей»  как  UC5
+
+  Чеб  -->  UC1
+  Гена  -->  UC1
+  Чеб  -->  UC2
+  Гена  -->  UC2
+  Гена  -->  UC3
+  Чеб  -->  UC4
+  Гена  -->  UC4
+  UC5  <.  UC1 : <<extends>>
 }
-
-' Чебурашка и Гена строят дом (действие)
-Cheb --> BuildHouse
-Gena --> BuildHouse
-
-' Чебурашка и Гена ищут друзей (действие)
-Cheb --> FindFriend
-Gena --> FindFriend
-
-' Гена играет на гармошке (действие)
-Gena --> PlayAccordion
-
-' Чебурашка и Гена добавляют кирпичи (действие)
-Cheb --> AddBrick
-Gena --> AddBrick
-
-' Зависимости внутри системы
-BuildHouse <.. RegisterFriends : <<extend>> : при завершении\nстроительства
 @enduml
 
 text
