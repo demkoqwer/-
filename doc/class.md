@@ -64,8 +64,9 @@ public class Дом {
 
 -СтатусДома меняется по мере добавления кирпичей
 
-Диаграмма
-https://class.png
+## Диаграмма
+
+![ Диаграмма классов ] ( class.png )
 ```
 @startuml
 skinparam classAttributeIconSize 0
