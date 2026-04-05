@@ -45,7 +45,7 @@
 ## Шаблоны проектирования
 
 ### Строитель (Builder)
-```java
+```
 public class Дом {
     public void добавить_кирпич(Кирпич кирпич) {
         количество_кирпичей++;
@@ -54,6 +54,7 @@ public class Дом {
         }
     }
 }
+```
 Заметки
 Чебурашка и Гена — оба Строители, но у Гены есть уникальный метод играть_на_гармошке()
 
@@ -65,7 +66,7 @@ public class Дом {
 
 Диаграмма
 https://class.png
-
+```
 plantuml
 @startuml
 skinparam classAttributeIconSize 0
