@@ -11,7 +11,7 @@
 | Class | Type | Attributes | Methods |
 |-------|------|------------|---------|
 | Строитель | Abstract | + сила: int, + имя: String | + строить(дом: Дом) |
-| Животное | Abstract | extends Строитель | + найти_друга() |
+| Друг | Abstract | extends Строитель | + найти_друга() |
 | Чебурашка | Concrete | + сила = 50, + собрано_кирпичей: int = 0 | extends Животное, + добавить_кирпич(кирпич: Кирпич) |
 | Гена | Concrete | + сила = 70, + инструмент: String = "Гармошка" | extends Животное, + играть_на_гармошке(), + передать_кирпич() |
 
@@ -67,7 +67,6 @@ public class Дом {
 Диаграмма
 https://class.png
 ```
-plantuml
 @startuml
 skinparam classAttributeIconSize 0
 
