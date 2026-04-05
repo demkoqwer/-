@@ -1,4 +1,6 @@
+```
 @startuml
+
 left to right direction
 
 actor "Чебурашка" as Cheb
@@ -30,3 +32,4 @@ Gena --> AddBrick
 ' Зависимости внутри системы
 BuildHouse <.. RegisterFriends : <<extend>> : при завершении\nстроительства
 @enduml
+```
