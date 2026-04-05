@@ -1,1 +1,36 @@
+@startuml
+title Пошаговое взаимодействие в системе "Строительство Дома Дружбы"
 
+actor "Гена" as Gena
+actor "Чебурашка" as Cheb
+participant "Кирпич" as Brick
+participant "Дом" as House
+
+' 1. Поиск друга
+Gena -> Cheb : найти_друга()
+activate Cheb
+Cheb --> Gena : "Друг найден!"
+deactivate Cheb
+
+' 2. Основной цикл строительства
+loop пока дом не построен (до 100 кирпичей)
+    Gena -> Brick : взять_кирпич()
+    activate Brick
+    Gena -> Cheb : передать_кирпич(кирпич)
+    Cheb -> House : добавить_кирпич(кирпич)
+    activate House
+    House --> Cheb : количество_кирпичей++
+    note right of House : Текущее количество
+    deactivate House
+    deactivate Brick
+end
+
+' 3. Завершение строительства
+Gena -> Cheb : играть_на_гармошке()
+note right of Gena : Праздничная атмосфера
+Cheb -> House : построить()
+House -> House : зарегистрировать_друзей()
+destroy House
+note over House : Дом построен!\nДрузья зарегистрированы
+
+@enduml
