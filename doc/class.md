@@ -66,7 +66,7 @@ public class Дом {
 
 ## Диаграмма
 
-![ Диаграмма классов ] ( class.png )
+![ Диаграмма классов ]( class.png )
 ```
 @startuml
 skinparam classAttributeIconSize 0
