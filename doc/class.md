@@ -8,7 +8,7 @@
 
 ### Иерархия строителей
 
-| Класс | Type | Attributes | Methods |
+| Class | Type | Attributes | Methods |
 |-------|------|------------|---------|
 | Строитель | Abstract | + сила: int, + имя: String | + строить(дом: Дом) |
 | Помощь | Abstract | extends Строитель | + найти_друга() |
